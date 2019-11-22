@@ -1,4 +1,6 @@
 DEBUG: True
 TESTING: False
-HOST: 127.0.0.1
-SECRET: some_words
+FLASK_HOST: 0.0.0.0
+FLASK_PORT: 5000
+SECRET: yaml_file_secret
+SQLALCHEMY_DATABASE_URI: 'postgresql://flask_app_user:123@localhost/flask_app'

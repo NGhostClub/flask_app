@@ -1,9 +1,9 @@
 from flask_app import app
-from flask_app import yaml_config as config
+
 
 
 def run_web():
-    app.run(host=config['HOST'], debug=config['DEBUG'])
+    app.run(host=app.config['HOST'], port=app.config['PORT'], debug=app.config['DEBUG'])
 	#app.run()
 
 
