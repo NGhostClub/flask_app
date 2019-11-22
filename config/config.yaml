@@ -1,0 +1,4 @@
+DEBUG: True
+TESTING: False
+HOST: 127.0.0.1
+SECRET: some_words
