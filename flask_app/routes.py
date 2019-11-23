@@ -6,17 +6,17 @@ from flask_app import db
 import time, json
 from sqlalchemy import func
 
-greet = '=== Wellcome to the Flask App === \n === \n To POST JSON to DB use /post url \n'
+greet = "=== Wellcome to the Flask App === <br> === <br>=== To POST JSON to DB use /post url <br>"
 
 @app.route('/')
 def index():
 	data_count = db.session.execute(db.session.query(func.count(TableLog.id))).scalar()
 	if data_count == 0:
-		data = '>> \n >> There is no records in database table  yet :( \n'
+		data = ">> <br> >> There is no records in database table  yet :( <br>"
 	else:
 		data = db.session.query(TableLog).order_by(TableLog.id.desc()).first().data
 #	return render_template('index.html', title='Index Page', data=data)
-	return '>> \n >> LAST RECORD \\/ \n' + data
+	return greet + ">> <br> >> LAST RECORD \\/ <br>" + data
 
 
 #@app.route('/dbtest')
