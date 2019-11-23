@@ -45,6 +45,7 @@ def json_test():
 	if request.is_json:
 		content = request.get_json()
 		data = content
+		db.session.add(TableLog(data))
 	else:
 		data = {'error':'no valid json', 'is_json': False}
 		data = json.dumps(data)
