@@ -16,7 +16,7 @@ def index():
 	else:
 		data = db.session.query(TableLog).order_by(TableLog.id.desc()).first().data
 #	return render_template('index.html', title='Index Page', data=data)
-	return greet + ">> <br> >> LAST RECORD \\/ <br>" + data
+	return greet + ">> <br> >> LAST RECORD \\/ <br>" + str(data)
 
 
 #@app.route('/dbtest')
