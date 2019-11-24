@@ -19,7 +19,7 @@ class Config(object):
 			yaml_config = yaml.safe_load(f)
 	else:
 		yaml_config = {}
-	HOST = os.environ.get('FLASK_HOST') or yaml_config.get('FLASK_HOST', '127.0.0.1')
+	HOST = os.environ.get('FLASK_HOST') or yaml_config.get('FLASK_HOST', '0.0.0.0')
 	PORT = os.environ.get('FLASK_PORT') or yaml_config.get('FLASK_PORT', '5000')
 	DEBUG = os.environ.get('DEBUG') or yaml_config.get('DEBUG', False)
 	SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or yaml_config.get('SQLALCHEMY_DATABASE_URI', 'postgresql://flask_app_user:123@localhost/flask_app')
