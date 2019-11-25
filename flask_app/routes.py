@@ -1,4 +1,4 @@
-from flask import Flask, request, url_for
+from flask import Flask, request, url_for, render_template
 from flask_app import app
 from flask_app.database import db_session
 from flask_app.models import TableLog
